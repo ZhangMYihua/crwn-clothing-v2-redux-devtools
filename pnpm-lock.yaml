@@ -23,6 +23,9 @@ dependencies:
   '@testing-library/user-event':
     specifier: 13.5.0
     version: 13.5.0(@testing-library/dom@10.1.0)
+  dotenv:
+    specifier: ^16.4.5
+    version: 16.4.5
   firebase:
     specifier: 9.6.6
     version: 9.6.6
@@ -56,6 +59,9 @@ dependencies:
   sass:
     specifier: 1.49.7
     version: 1.49.7
+  stripe:
+    specifier: ^15.5.0
+    version: 15.5.0
   styled-components:
     specifier: 5.3.3
     version: 5.3.3(@babel/core@7.24.5)(react-dom@17.0.2)(react-is@18.3.1)(react@17.0.2)
@@ -5209,6 +5215,11 @@ packages:
   /dotenv@10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
     dev: false
 
   /duplexer@0.1.2:
@@ -10719,6 +10730,14 @@ packages:
   /strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+    dev: false
+
+  /stripe@15.5.0:
+    resolution: {integrity: sha512-c04ToET4ZUzoeSh2rWarXCPNa2+6YzkwNAcWaT4axYRlN/u1XMkz9+inouNsXWjeT6ttBrp1twz10x/sCbWLpQ==}
+    engines: {node: '>=12.*'}
+    dependencies:
+      '@types/node': 20.12.8
+      qs: 6.11.0
     dev: false
 
   /style-loader@3.3.4(webpack@5.91.0):
