@@ -25,7 +25,7 @@ const App = () => {
         createUserDocumentFromAuth(user);
       }
 
-      const userValues = (({ displayName, email }) => ({ displayName, email }))(user)
+      const userValues = user && (({ displayName, email }) => ({ displayName, email }))(user)
       dispatch(setCurrentUser(userValues));
     });
 
