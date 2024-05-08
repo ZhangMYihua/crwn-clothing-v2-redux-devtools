@@ -12,7 +12,9 @@ import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentication/authentication.component';
 import Shop from './routes/shop/shop.component';
 import Checkout from './routes/checkout/checkout.component';
-import { setCurrentUser } from './store/user/user.action';
+import { userActions } from './store/user/user.reducer';
+
+const { setCurrentUser } = userActions
 
 const App = () => {
   const dispatch = useDispatch();
@@ -22,7 +24,9 @@ const App = () => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
-      dispatch(setCurrentUser(user));
+
+      const userValues = user && (({ displayName, email }) => ({ displayName, email }))(user)
+      dispatch(setCurrentUser(userValues));
     });
 
     return unsubscribe;
